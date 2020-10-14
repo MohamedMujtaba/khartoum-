@@ -8,6 +8,8 @@ header .cont .main-nav {
   justify-content: center;
   text-align: center;
   /* padding: 3px 20px; */
+  /* padding-left: 10px;
+  padding-right: 10px; */
 
   display: grid;
   grid-template: repeat(2, 1fr);
@@ -15,10 +17,11 @@ header .cont .main-nav {
   grid-template-areas:
     "i i i i i i "
     ". . l  r . .";
-  grid-gap: 5px;
+  /* grid-gap: px; */
 }
 header .main-nav ul li a {
-  padding: 20px 20px;
+  padding: 15px 15px;
+  font-size: 1.2rem;
 }
 
 header .main-nav .left {
