@@ -1,15 +1,53 @@
-header .main-nav {
+header .cont .main-nav {
   /* position: sticky; */
   /* top: 20; */
   /* left: 0; */
-  /* right: 10%; */
+  /* right: 10%;
+  display: flex;*/
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* padding: 3px 20px; */
+
+  display: grid;
+  grid-template: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "i i i i i i "
+    ". . l  r . .";
+  grid-gap: 5px;
+}
+header .main-nav ul li a {
+  padding: 20px 20px;
+}
+
+header .main-nav .left {
+  grid-area: l;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 3px 20px;
+  margin-left: 5px;
 }
-
+header .main-nav .right {
+  grid-area: r;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 5px;
+}
+header .cont .main-nav .logo {
+  grid-area: i;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+header .cont .main-nav .logo img {
+  transform: translateX(-20%);
+}
 #my-form {
   height: 300px;
   width: 300px;
