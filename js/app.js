@@ -2,15 +2,20 @@ const numbOne = document.getElementById('numbOne');
 const numbTwo = document.getElementById('numbTwo');
 const numbThree = document.getElementById('numbThree');
 const btnSubmit = document.getElementById('btnSubmit');
-const valed = document.getElementById('valed');
-const valed2 = document.getElementById('valed2');
+const valed = document.querySelector('.numbOne');
+const valed2 = document.querySelector('.numbTwo');
 btnSubmit.addEventListener('click', toDo);
 let scrolled = false;
 function toDo(e) {
     // year1
     if (numbOne.value == 0 && numbTwo.value == 0 && numbThree.value == 0) {
+
+        valed.style.display = 'block'
+        valed2.classList.add('hide')
+
         console.log('hi1');
-    } else if (numbOne.value == 0 && numbTwo.value == 0 && numbThree.value == 1) {
+    }
+    else if (numbOne.value == 0 && numbTwo.value == 0 && numbThree.value == 1) {
         console.log('hi1-2');
     }
     // year2 
@@ -205,4 +210,5 @@ function toDo(e) {
         console.log('hi-gass5-1');
     }
     e.preventDefault();
+
 }

@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -38,9 +39,12 @@ select {
   border-radius: 4px;
   border: 2px solid orange;
   outline: none;
+  font-weight: bold;
 }
 label {
   font-size: 1.1rem;
+  font-weight: bold;
+  display: block;
 }
 .cont {
   width: 80%;
@@ -130,7 +134,8 @@ header .into h1 {
 }
 /* ------------FormSection------------ */
 .form-section {
-  height: 100vh;
+  display: flex;
+  height: auto;
   padding: 30px 10px;
   align-items: center;
   justify-content: center;
@@ -140,13 +145,69 @@ header .into h1 {
   margin-bottom: 40px;
 }
 #my-form {
-  height: 20%;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
 }
-
+.btn-wrap {
+  align-self: flex-end;
+}
+.form-wrap {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  text-align: left;
+}
+#numbTwo {
+  padding: 6px 90px 6px 90px;
+}
+#numbThree {
+  padding: 6px 90px 6px 90px;
+}
+/* ---------output------------ */
+.output {
+  margin: 20px 0 50px 0;
+  min-width: 100%;
+}
+.output .cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.output .info {
+  display: flex;
+  /* min-width: 100%; */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  border: 2px solid var(--primary);
+  border-radius: 3px;
+  padding: 10px 30px;
+  margin: 10px;
+  box-shadow: 3px 3px 3px 3px #888888;
+  max-width: 1100px;
+  display: none;
+  line-height: 1.3rem;
+}
+.output .info h2 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-decoration: underline var(--primary);
+}
+.output .info p a {
+  font-size: 15px;
+  color: var(--secondery);
+  font-weight: bold;
+}
+.output .info p a:hover {
+  border-bottom: 2px solid var(--secondery);
+}
 footer {
   height: 80px;
   background: #333;
@@ -163,6 +224,12 @@ footer p {
 footer p span {
   font-size: 1.1rem;
   font-weight: bolder;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
 }
 
 /* @media (max-width: 1000px) {
